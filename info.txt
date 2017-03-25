@@ -1,0 +1,8 @@
+default.py:
+	Remove REMOTE_DGB section
+	
+addon.xml
+	Remove <import addon="script.module.pydevd" version="4.4.0"/> section
+	
+pysrc:
+	C:\Users\Name\.p2\pool\plugins\org.python.pydev_5.5.0.201701191708\pysrc
