@@ -4,24 +4,25 @@
 import xbmc, xbmcaddon, xbmcplugin, xbmcgui
 import os, re, sys, urllib, urllib2
 import requests
-from time import sleep
 
-REMOTE_DBG = True
-
-# append pydev remote debugger
-if REMOTE_DBG:
-    # Make pydev debugger works for auto reload.
-    # Note pydevd module need to be copied in XBMC\system\python\Lib\pysrc
-    try:
-        #import pysrc.pydevd as pydevd # with the addon script.module.pydevd, only use `import pydevd`
-        import sys
-        sys.path.append('C:\Users\Kirsten\.p2\pool\plugins\org.python.pydev_5.5.0.201701191708\pysrc')
-        import pydevd    # stdoutToServer and stderrToServer redirect stdout and stderr to eclipse console
-        pydevd.settrace('localhost', stdoutToServer=True, stderrToServer=True)
-    except ImportError:
-        sys.stderr.write("Error: " +
-            "You must add org.python.pydev.debug.pysrc to your PYTHONPATH.")
-        sys.exit(1)
+#===============================================================================
+# REMOTE_DBG = True
+# 
+# # append pydev remote debugger
+# if REMOTE_DBG:
+#     # Make pydev debugger works for auto reload.
+#     # Note pydevd module need to be copied in XBMC\system\python\Lib\pysrc
+#     try:
+#         #import pysrc.pydevd as pydevd # with the addon script.module.pydevd, only use `import pydevd`
+#         import sys
+#         sys.path.append('C:\Users\Kirsten\.p2\pool\plugins\org.python.pydev_5.5.0.201701191708\pysrc')
+#         import pydevd    # stdoutToServer and stderrToServer redirect stdout and stderr to eclipse console
+#         pydevd.settrace('localhost', stdoutToServer=True, stderrToServer=True)
+#     except ImportError:
+#         sys.stderr.write("Error: " +
+#             "You must add org.python.pydev.debug.pysrc to your PYTHONPATH.")
+#         sys.exit(1)
+#===============================================================================
         
 addonID = 'plugin.video.phimpt'
 addon = xbmcaddon.Addon(addonID)
