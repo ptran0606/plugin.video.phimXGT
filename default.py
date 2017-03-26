@@ -5,10 +5,10 @@ import xbmc, xbmcaddon, xbmcplugin, xbmcgui
 import os, re, sys, urllib, urllib2
 import requests
 
+REMOTE_DBG = True
+ 
+# append pydev remote debugger
 #===============================================================================
-# REMOTE_DBG = True
-# 
-# # append pydev remote debugger
 # if REMOTE_DBG:
 #     # Make pydev debugger works for auto reload.
 #     # Note pydevd module need to be copied in XBMC\system\python\Lib\pysrc
@@ -117,6 +117,11 @@ def LoadVideos(url, name):
         if (len(fileLst) > 0):
             link = fileLst[0]
             url = link[:link.find('"')]
+            link = GetUrl(url)
+            link = link[link.find('"file":'):]
+            link = link[link.find('https:'):]
+            link = link[:link.find('"')]
+            url = link.replace('\\', '')
         else:
             url = ""
     video = xbmcgui.ListItem(name)

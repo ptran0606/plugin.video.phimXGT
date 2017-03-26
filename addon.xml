@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	<addon id="plugin.video.phimpt" version="1.0.3" name="[COLOR green][B]PhimPT[/B][/COLOR]" provider-name="Phong Tran">
+	<addon id="plugin.video.phimpt" version="1.0.4" name="[COLOR green][B]PhimPT[/B][/COLOR]" provider-name="Phong Tran">
 		<requires>
 			<import addon="xbmc.python" version="2.1.0"/>
 			<!--import addon="script.module.pydevd" version="4.4.0"/-->
