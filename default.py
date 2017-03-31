@@ -24,7 +24,7 @@ REMOTE_DBG = True
 #         sys.exit(1)
 #===============================================================================
         
-addonID = 'plugin.video.phimpt'
+addonID = 'plugin.video.phimXGT'
 addon = xbmcaddon.Addon(addonID)
 pluginhandle = int(sys.argv[1])
 defaultIcon = xbmc.translatePath('special://home/addons/' + addonID + '/icon.png')
